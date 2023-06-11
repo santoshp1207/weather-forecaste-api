@@ -1,6 +1,7 @@
 package com.weather.webclients;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.weather.model.consumer.CityWeatherForecastInfo;
 
 import java.util.HashMap;
@@ -25,7 +26,7 @@ public class RestWebClient {
 	private Map<String, CityWeatherForecastInfo> localCache = new HashMap<>();
 
 	public RestWebClient() {}
-	@HystrixCommand(fallbackMethod="getCachedWeather")
+	@HystrixCommand(fallbackMethod="getCachedWeather", commandProperties = {@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")})
 	public CityWeatherForecastInfo getCityWeatherForecastData(String city, String offlineMode) throws RestClientException {
 		CityWeatherForecastInfo response = null;
 //		String mode = environment.getProperty("app.offline.mode");

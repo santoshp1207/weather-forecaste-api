@@ -1,12 +1,13 @@
 package com.weather.model.consumer.response;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDate;
 import java.util.Objects;
 
 public class DateWiseMinMaxTemp {
-	@JsonProperty("date")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private LocalDate date;
 	@JsonProperty("minTemp")
 	private double minTemp;
