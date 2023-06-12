@@ -19,7 +19,6 @@ public class DateWiseMinMaxTemp {
 	private double minWindSpeed;
 	@JsonProperty("maxWindSpeed")
 	private double maxWindSpeed;
-
 	@JsonProperty("windSpeedAction")
 	private String windSpeedAction;
 

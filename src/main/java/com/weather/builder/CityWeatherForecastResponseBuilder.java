@@ -18,7 +18,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class CityWeatherForecastResponseBuilder {
 
-
     public CityWeatherForecastResponse buildForecastResponse(CityWeatherForecastInfo resDataFromApi) {
         Map<LocalDate, DateWiseMinMaxTemp>  forecastMapByDate = buildDateWiseMinMaxTempData(resDataFromApi);
         setWeatherAlerts(resDataFromApi, forecastMapByDate);

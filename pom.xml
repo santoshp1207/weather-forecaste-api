@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sapient.weatherapp</groupId>
-	<artifactId>weather-forcast-api</artifactId>
+	<artifactId>weather-forecast-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>weather-forcast-api</name>
 	<description>Demo project for Spring Boot</description>
@@ -67,6 +67,19 @@
 			<groupId>io.swagger</groupId>
 			<artifactId>swagger-annotations</artifactId>
 			<version>1.6.9</version>
+		</dependency>
+		<dependency>
+			<groupId>net.minidev</groupId>
+			<artifactId>asm</artifactId>
+			<version>1.0.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.minidev</groupId>
+			<artifactId>json-smart</artifactId>
+			<version>2.2.1</version>
+			<scope>test</scope>
 		</dependency>
 <!--		<dependency>-->
 <!--			<groupId>org.springdoc</groupId>-->
@@ -166,7 +179,6 @@
                     </execution>
                 </executions>
             </plugin>
-                    			
 		</plugins>
 	</build>
 
